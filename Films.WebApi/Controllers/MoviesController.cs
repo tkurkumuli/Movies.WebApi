@@ -28,8 +28,8 @@ namespace Movies.WebApi.Controllers
             return Ok();
         }
 
-        [HttpPut("UpdateMovie")]
-        public async Task<IActionResult> UpdateMovie([FromForm] UpdateMovieCommand.Request request)
+        [HttpPut("MarkAsIsWatched")]
+        public async Task<IActionResult> MarkAsIsWatched([FromForm] UpdateMovieCommand.Request request)
         {
            await mediator.Send(request);
            return Ok();
